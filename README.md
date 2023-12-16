@@ -17,6 +17,9 @@ Example to demonstrate how to use Django `messages`.
 - See [notes/chat_gpt.md](notes/chat_gpt.md) for more information.
 
 ## Known Issues & Areas of Improvement
+
+- Will create a new repository which includes CSS styling. This will be a more complete example of how to use Django's `messages` framework and will include message tags such as `success`, `warning`, `error`, and `debug`. This repository is meant to be a simple example of how to use the `messages` framework.
+
 ## Setup & Installation
 ## Usage
 ## Contributing

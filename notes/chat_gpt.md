@@ -1,4 +1,4 @@
-# Django `messages` Framework
+# Django `messages` Framework - ChatGPT
 
 - [Django 'messages' framework example - ChatGPT](https://chat.openai.com/share/7def9dcf-a41c-46b6-a020-d8cebd1c1724)
 
@@ -24,6 +24,10 @@ Using Django's `messages` framework is a straightforward way to display one-time
 
    TEMPLATES = [
        {
+            "DIRS": [
+                # Specify location of templates (`index.html`) here:
+                BASE_DIR / "templates",
+            ],
            # ...
            'OPTIONS': {
                'context_processors': [
@@ -42,10 +46,17 @@ Using Django's `messages` framework is a straightforward way to display one-time
    ```python
    from django.contrib import messages
 
-   def my_view(request):
-       # Your logic here
-       messages.info(request, 'This is a custom message!')
-       return render(request, 'my_template.html')
+    def messages_view(request):
+        """
+        A view that displays a message.
+        """
+        # Add other logic here...
+
+        # Create two messages to be displayed on `index.html`:
+        messages.info(request, "This is the first custom message!")
+        messages.info(request, "This is the second custom message!")
+        # Return the original `request` object and render the template `index.html`:
+        return render(request, "index.html")
    ```
 
 3. **Displaying the Message in Your Template**:
